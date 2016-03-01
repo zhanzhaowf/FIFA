@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 5</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>FIFA World Cup<sup>TM</sup></h1>
+		<h2>All Time Statistics</h2>
+		<div>
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="ChartData">Statistic: </label>
+				<select class="form-control" id="chart-data">
+					<option value="GOALS">Goals</option>
+					<option value="AVERAGE_GOALS">Average Goals</option>
+					<option value="MATCHES">Number of Matches</option>
+					<option value="TEAMS">Number of Teams</option>
+					<option value="AVERAGE_ATTENDANCE">Average Attendence</option>
+				</select>
+			</div>
+			<div class="form-group right">
+				<label for="YearRange">Year Range: </label>
+				<input type="text" id="year-range" readonly>
+				<button type="button" class="btn btn-success" id="year-filter">
+					Filter by Year
+				</button>
+			</div>
+		</form>
+		</div>
+		<div id="year-slider"></div>
+				
+		<div class="row">
+			<!-- Parent container for the visualization -->
+			<div class="col-md-7" id="chart-area"></div>
+			<div class="col-md-5">
+				<h3 id="edition"></h3>
+				<table class="table">
+					<tbody class="table-striped">
+						<tr>
+							<td>Winner: </td>
+							<td class="variable" id="winner"></td>
+						</tr>
+						<tr>
+							<td>Goals: </td>
+							<td class="variable" id="goals"></td>
+						</tr>
+						<tr>
+							<td>Average Goals: </td>
+							<td class="variable" id="avg-goals"></td>
+						</tr>
+						<tr>
+							<td>Number of Matches: </td>
+							<td class="variable" id="matches"></td>
+						</tr>
+						<tr>
+							<td>Number of Teams: </td>
+							<td class="variable" id="teams"></td>
+						</tr>
+						<tr>
+							<td>Average Attendance: </td>
+							<td class="variable" id="attendance"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+	<p>
+		Note: This work is done as part of <a href="http://www.cs171.org/2016/">CS171 Visualization</a> class homework.
+	</p>
+	<div id="footer">
+		Made by Zhan Zhao © 2016
+	</div>
+
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+</body>
+</html>
